@@ -1,27 +1,32 @@
-# HiPlatform
+# HiPlatform - Edwin Reule 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.2.
+## Olá! 
 
-## Development server
+Oi, Me chamo Edwin Reule. :) 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Desenvolvi o projeto em Angular 11 pois pensei em reutilizar apenas um componente para todas as funcionalidades, até mesmo a partir dele mesmo. (rs)
+Tentei criar um fluxo de usabilidade agradável e dinâmico. 
 
-## Code scaffolding
+Vocês irão reparar que deixei a rota do 'data.json' apontando para o GIT que foi enviado. Foi uma tentativa de fazer vocês passarem pela experiencia do 'loading' da aplicação. Claro que falando de performance, o melhor caminho seria o 'data.json' junto com a aplicação.
+Eu gostaria de ter focado mais em performance aplicando serviços para consultar itens 'filhos' apenas após ter carregados os itens 'pais', porêm estou muito corrido no meu trabalho atual e não consegui tempo suficiente (fiz de madrigada o teste rs) para montar uma 'api' e nem sei se essa era a intenção do teste. Mas enfim, deixo minha observação. :)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+O projeto já esta no formato de Angular Universal, que é uma forma que o Google encontrou para melhorar a performance de SEO do Angular. Não muda nada para o teste, mas achei legal já deixar nesse formato.
 
-## Build
+Espero que gostem! <3
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Minha DEMO online:
+    
 
-## Running unit tests
+## Caso nunca tenha rodado o Angular na sua Maquina: 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Sugiro a instalação do Angular Cli. 
 
-## Running end-to-end tests
+`npm install -g @angular/cli` 
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Rodando o projeto
+ Antes de tudo: `npm install`,
+ Logo depois pode rodar: `ng serve --open`
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Caso queira ver o build
+ Simples:  `ng build`
+ 

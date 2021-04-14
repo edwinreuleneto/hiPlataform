@@ -1,0 +1,16 @@
+<ul *ngIf="!!display">
+    <ng-container *ngFor="let item of (!load ? row : [1,2,3,4,5]) | keyvalue">
+        <li [ngClass]="{'open' : item.value.display}" [className]="!load ? item.value.id : 'load'">
+            <label [for]="item.value ? item.value.id : 'label'" [ngClass]="{'load': !!load }">
+                <span class="tag" [ngClass]="{'load-affection': !!load }"> {{item.value ? item.value.name : '' }}</span>
+                <input [indeterminate]="item.value.indeterminate" [checked]="item.value.checked" (change)="changeCheck(item.value, !item.value.checked); emitChangeChildren(row)" type="checkbox" [name]="item.value ? item.value.id : 'label'" [id]="item.value ? item.value.id : 'label'" [disabled]="load" > 
+                <span class="checkmark" [ngClass]="{'load-affection': !!load }"></span>
+                <button class="dropdown" [title]="!item.value.display ? 'Abrir' : 'Fechar'" *ngIf="!isEmpty(item.value.children)" (click)="openChildren(item.value)"> 
+                    <span *ngIf="!item.value.display"> Abrir </span> <!--Apenas para Usabilidade-->
+                    <span *ngIf="!item.value.display"> Fechar </span> <!--Apenas para Usabilidade-->
+                </button>
+            </label>
+            <app-list-checkout [row]=item.value.children (childrenCheck)="getEventChangeChildren($event)" [display]=item.value.display [load]=false [idFather]=item.value.id> </app-list-checkout>
+        </li>
+    </ng-container>
+</ul>
