@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
   private GetListUsers(): void {
     this.UsersService.GetUsers().subscribe( (users: any) => {
       this.page.listCheck = {
-        load: true,
+        load: false,
         row: users,
         errCount: 0
       }
